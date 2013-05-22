@@ -11,7 +11,8 @@
 
 //c) no further problems with initialization, because main just uses the first n slots
 //   maybe integer overflow problems if n > sqrt(2^32)
-//d) not neccesary, maybe long instead of int
+//   memory leak because space of s is not freed
+//d) delete[] added, use of long instead of int
 
 #include <iostream>
 using namespace std;
@@ -36,6 +37,7 @@ int main() {
         for(int i = 0; i < n; ++i) {
             cout << s[i] << endl;
         }
+        delete[] (s-1); // added
         cin >> n;
     }
     return 0;
