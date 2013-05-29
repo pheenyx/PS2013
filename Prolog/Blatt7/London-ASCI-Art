@@ -1,28 +1,28 @@
 ?-nearby(W, charing_cross)
-			nearby(X,Y) :- connected(X, Y, _).
+			nearby(X,Y) :- connected(X, Y, L).
 	{X -> W, Y -> charing_cross}
-?-connected(W, charing_cross, _)
+?-connected(W, charing_cross, L)
 			connected(green_park, charing_cross, jubilee)
-	{W -> green_park, _ -> jubilee}
+	{W -> green_park, L -> jubilee}
 []
 
 
 
 ?-nearby(W, charing_cross) 
-                        nearby(X,Y) :- connected(X, Y, _).
+                        nearby(X,Y) :- connected(X, Y, L).
         {X -> W, Y -> charing_cross}
-?-connected(W, charing_cross, _) 
+?-connected(W, charing_cross, L) 
                         connected(piccadilly_circus, charing_cross, bakerloo)
-        {W -> piccadilly_circus, _ -> bakerloo}
+        {W -> piccadilly_circus, L -> bakerloo}
 []
 
 
 
 ?-nearby(W, charing_cross) 
-                        nearby(X,Y) :- connected(X, Y, _).
+                        nearby(X,Y) :- connected(X, Y, L).
         {X -> W, Y -> charing_cross}
-?-connected(W, charing_cross, _) 
+?-connected(W, charing_cross, L) 
                         connected(leicester_square, charing_cross, northern)
-        {W -> leicester_square, _ -> northern}
+        {W -> leicester_square, L -> northern}
 []
 

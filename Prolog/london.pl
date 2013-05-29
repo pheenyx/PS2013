@@ -9,3 +9,12 @@ connected(oxford_circus,piccadilly_circus,bakerloo).
 connected(piccadilly_circus,charing_cross,bakerloo).
 connected(tottenham_court_road,leicester_square,northern).
 connected(leicester_square,charing_cross,northern).
+
+nearby(X,Y) :- connected(X,Y,_).
+nearby(X,Y) :- connected(X,Z,L), connected(Z,Y,L).
+
+not_too_far(X,Y) :- connected(X,Y,_).
+not_too_far(X,Y) :- connected(X,Z,_), connected(Z,Y,_).
+
+reachable(X,Y,[])    :- connected(X,Y,_).
+reachable(X,Y,[Z|R]) :- connected(X,Z,_), reachable(Z,Y,R).
