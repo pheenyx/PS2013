@@ -1,0 +1,24 @@
+a)  (True‚'a',[1,2,3])
+(Bool,Char,[Int])
+
+b)  (['a'],['b'],['b'],['a'])
+([Char],[Char],[Char],[Char])
+
+c)  [[[1,2,3],[5,6,7,8]],[[9,10,11]]]
+[[[Int]]]
+
+d)  [[(1,2,3),(5,6,7,8)],[(9,10,11)]]
+Fehler Liste von ungleich langen Tupeln
+
+e)  ((<),(==))
+(Ord a, Eq a1) => (a -> a -> Bool, a1 -> a1 -> Bool)
+
+f)  second xs = head (tail xs)
+second :: [t] -> t
+
+g)  pair x y = (x,y)
+pair :: t -> (t -> (t, t))
+
+h)  palindrome xs = reverse xs == xs
+palindrom :: [t] -> Bool
+
