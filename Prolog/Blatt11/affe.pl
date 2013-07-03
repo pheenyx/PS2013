@@ -15,4 +15,4 @@ move(state(P1, on_floor, P, H),
     state(P2, on_floor, P, H)).
 
 actions(state(_,_,_,has),[]).
-actions(S,[M|L]):-move(S,M,S1),actions(S1, L).
+actions(S,[M|L]):-move(S,M,S1),actions(S1, L),!.
